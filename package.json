@@ -2,10 +2,9 @@
   "name": "scrolls",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "npm run build & nodemon index.js"
+    "build": "webpack --watch",
+    "start:dev": "npm run build & nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,7 @@
   "homepage": "https://github.com/cr646531/scrolls#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.1",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }
