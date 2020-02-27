@@ -8,6 +8,9 @@ var interval = setInterval(draw, speed);
 
 var grass = document.getElementById("grass");
 var sky = document.getElementById("sky");
+var clouds = document.getElementById("clouds");
+var bushes = document.getElementById("bushes");
+var trees = document.getElementById("trees");
 
 var index_one = 0;
 var index_two = canvas.width;
@@ -16,12 +19,20 @@ var index_two = canvas.width;
 // draw functions
 function draw() {
     ctx.drawImage(sky, index_one, 0);
+    ctx.drawImage(clouds, index_one, 0);
+    ctx.drawImage(bushes, index_one, 0);
+    ctx.drawImage(trees, index_one, 0);
     ctx.drawImage(grass, index_one, 0);
-    index_one--;
 
     ctx.drawImage(sky, index_two, 0);
+    ctx.drawImage(clouds, index_two, 0);
+    ctx.drawImage(trees, index_two, 0);
+    ctx.drawImage(bushes, index_two, 0);
     ctx.drawImage(grass, index_two, 0);
+    
+    index_one--;
     index_two--;
+
 
     if(Math.abs(index_one) == canvas.width) {
         index_one = canvas.width;
