@@ -6,26 +6,29 @@ var ctx = canvas.getContext('2d');
 var speed = 1;
 var interval = setInterval(draw, speed);
 
-var background = document.getElementById("background");
-var background2 = document.getElementById("background2");
+var grass = document.getElementById("grass");
+var sky = document.getElementById("sky");
 
 var index_one = 0;
-var index_two = canvas.width * 2;
+var index_two = canvas.width;
+
 
 // draw functions
 function draw() {
-    ctx.drawImage(background, index_one, 0);
+    ctx.drawImage(grass, index_one, 0);
+    ctx.drawImage(sky, index_one, 0);
     index_one--;
 
-    ctx.drawImage(background2, index_two, 0);
+    ctx.drawImage(grass, index_two, 0);
+    ctx.drawImage(sky, index_two, 0);
     index_two--;
 
-    if(Math.abs(index_one) == canvas.width * 2) {
-        index_one = canvas.width * 2;
+    if(Math.abs(index_one) == canvas.width) {
+        index_one = canvas.width;
     }
 
-    if(Math.abs(index_two) == canvas.width * 2) {
-        index_two = canvas.width * 2;
+    if(Math.abs(index_two) == canvas.width) {
+        index_two = canvas.width;
     }
 
     console.log(index_one);
