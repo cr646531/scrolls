@@ -3,7 +3,7 @@ var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
 // update the canvas every 10ms
-var speed = 1;
+var speed = 10;
 var interval = setInterval(draw, speed);
 
 var grass = document.getElementById("grass");
@@ -15,12 +15,12 @@ var index_two = canvas.width;
 
 // draw functions
 function draw() {
-    ctx.drawImage(grass, index_one, 0);
     ctx.drawImage(sky, index_one, 0);
+    ctx.drawImage(grass, index_one, 0);
     index_one--;
 
-    ctx.drawImage(grass, index_two, 0);
     ctx.drawImage(sky, index_two, 0);
+    ctx.drawImage(grass, index_two, 0);
     index_two--;
 
     if(Math.abs(index_one) == canvas.width) {
