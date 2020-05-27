@@ -3,9 +3,10 @@ var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
 // update the canvas every 10ms
-var speed = 10;
+var speed = 1;
 var interval = setInterval(draw, speed);
 
+// entity variables
 var grass = document.getElementById("grass");
 var sky = document.getElementById("sky");
 var clouds = document.getElementById("clouds");
@@ -14,6 +15,7 @@ var trees = document.getElementById("trees");
 
 var index_one = 0;
 var index_two = canvas.width;
+var index_unused = 3;
 
 
 // draw functions
